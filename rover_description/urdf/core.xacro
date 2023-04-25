@@ -8,6 +8,8 @@
         <geometry>
           <box size="${size}"/>
         </geometry>
+        <material name="${body_colour}"/>
+        <xacro:gaz_colour name="${name}" colour="${body_colour}"/>
       </visual>
     </link>
   </xacro:macro>
@@ -26,6 +28,8 @@
         <geomentry>
           <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
         </geomentry>
+        <material name="${wheel_colour}"/>
+        <xacro:gaz_colour name="${name}" colour="${wheel_colour}"/>
       </visual>
     </link>
   </xacro:macro>

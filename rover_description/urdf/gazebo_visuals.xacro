@@ -1,0 +1,9 @@
+<robot name="rover">
+  
+  <xacro:macro name="gaz_colour" params="name colour">
+    <gazebo reference="${name}">
+      <material>Gazebo/White</material>
+    </gazebo>
+  </xacro:macro>
+
+</robot>
