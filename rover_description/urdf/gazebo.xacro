@@ -1,0 +1,11 @@
+<robot name="rover">
+
+  <!--gazebo parameters-->
+
+  <!--gazebo visuals-->
+  <xacro:include filename="$(find rover_description)/urdf/gazebo_visuals.xacro"/>
+
+  <!--gazebo physics-->
+  <xacro:include filename="$(find rover_description)/urdf/gazebo_physics.xacro"/>
+
+</robot>

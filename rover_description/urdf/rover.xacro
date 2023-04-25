@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<robot name="rover" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!--gazebo references-->
+<xacro:include filename="$(find rover_description)/urdf/gazebo.xacro"/>
+
+<!--rviz references-->
+<xacro:include filename="$(find rover_description)/urdf/rviz.xacro"/>
+
+<!--links and joints-->
+<xacro:include filename="$(find rover_description)/urdf/core.urdf"/>
+
+</robot>
+
