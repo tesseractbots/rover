@@ -17,13 +17,26 @@
 
   <xacro:macro name="chasis_link" params="name size colour">
     <link name="${name}">
+      <inertial>
+        <mass value="0.25"/>
+        <inertia ixx="0.000486" ixy="0.0" ixz="0.0" iyy="0.000486" iyz="0.0" izz="0.000729"/>
+      </inertial>  
       <visual>
         <geometry>
           <box size="${size}"/>
         </geometry>
         <material name="${colour}"/>
       </visual>
-    </link>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.09" length="0.09"/>
+        </geometry>
+      </collision>
+      <gazebo reference="front_roll_link">
+        <material>Gazebo/Orange</material>
+      </gazebo>
+   </link>
   </xacro:macro>
 
   <xacro:macro name="static_joint" params="name parent child" >
